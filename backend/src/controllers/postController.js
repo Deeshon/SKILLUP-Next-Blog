@@ -12,12 +12,16 @@ export const getAllPosts = async (req, res) => {
     if (error) throw error;
     return res.status(status).json({
       success: true,
-      data: posts,
+      result: {
+        response: posts
+      }
     });
   } catch (err) {
     return res.status(500).json({
       sucess: false,
-      error: err.message,
+      result: {
+        response: err.message
+      }
     });
   }
 };
@@ -36,13 +40,17 @@ export const getPost = async (req, res) => {
 
     return res.status(status).json({
       success: true,
-      data: post,
+      result: {
+        response: post
+      }
     });
 
   } catch (err) {
     return res.status(500).json({
       sucess: false,
-      error: err.message,
+      result: {
+        response: err.message
+      }
     });
   }
 };

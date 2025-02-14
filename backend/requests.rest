@@ -1,0 +1,53 @@
+### GET All users
+GET http://localhost:3001/api/users
+Authorization: Bearer: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbS5zbWl0aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InNhbXNtaXRocGFzc3dvcmQiLCJpYXQiOjE3Mzk1MzkyNzIsImV4cCI6MTczOTUzOTI5Mn0.tHLkLV8aQESCyzkZt8HF_pwaNsv-r9suI95Q4H6Zu_0
+
+### GET User
+GET http://localhost:3001/api/users/94f6e543-f94a-43d6-9153-617623ebc029
+
+
+### POST register
+POST http://localhost:3001/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "Callium Cater",
+    "email": "callium.cater@gmail.com",
+    "password": "calliumcaterpassword"
+}
+
+### POST login
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+ {
+    "email": "sam.smith@gmail.com",
+    "password": "samsmithpassword"
+ }
+
+
+### POST refresh access token
+POST http://localhost:3001/api/auth/refreshToken
+Cookie: 
+### 
+
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "password": "johndoepassword"
+}
+
+###
+
+POST http://localhost:3001/api/users/login
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "password": "johndoepassword"
+}
+
+###
+GET http://localhost:3001/api/posts
